@@ -1,0 +1,32 @@
+{
+  "name": "budoux-components-examples",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Examples for budoux-components",
+  "type": "module",
+  "scripts": {
+    "predev": "cd .. && npm run build",
+    "dev:react": "vite --config vite.react.config.js",
+    "dev:vue": "vite --config vite.vue.config.js",
+    "dev:astro": "astro dev --root ./astro",
+    "build:react": "vite build --config vite.react.config.js",
+    "build:vue": "vite build --config vite.vue.config.js",
+    "build:astro": "astro build --root ./astro",
+    "install": "cd .. && npm run build"
+  },
+  "dependencies": {
+    "budoux-components": "file:..",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vue": "^3.3.13"
+  },
+  "devDependencies": {
+    "@astrojs/react": "^3.0.9",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitejs/plugin-vue": "^5.0.2",
+    "astro": "^4.0.8",
+    "vite": "^5.0.10"
+  }
+}
