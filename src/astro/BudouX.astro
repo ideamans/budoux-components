@@ -1,0 +1,30 @@
+---
+import { applyBudouX, getBudouXSegments } from '../core/apply-budoux.js';
+
+export interface Props {
+  /**
+   * Text content to apply BudouX (when using as a self-closing component)
+   */
+  text?: string;
+  /**
+   * CSS class for wrapper spans
+   * @default 'whitespace-nowrap'
+   */
+  class?: string;
+}
+
+const { text, class: className = 'whitespace-nowrap' } = Astro.props;
+
+// If text prop is provided, use it directly
+if (text) {
+  const segments = getBudouXSegments(text);
+  const html = segments.map(segment => `<span class="${className}">${segment}</span>`).join('');
+  return <Fragment set:html={html} />;
+}
+
+// Get slot content as HTML string
+const slotContent = await Astro.slots.render('default');
+const processedContent = applyBudouX(slotContent, className);
+---
+
+<Fragment set:html={processedContent} />

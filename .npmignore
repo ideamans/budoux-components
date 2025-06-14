@@ -1,0 +1,27 @@
+# Source files
+src/
+tests/
+
+# Config files
+jest.config.*.cjs
+tsconfig*.json
+.github/
+
+# Development files
+*.test.*
+jest.setup.js
+
+# Editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Documentation source
+CLAUDE.md

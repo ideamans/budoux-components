@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "outDir": "./dist/react",
+    "rootDir": "./src"
+  },
+  "include": ["src/react/**/*", "src/core/**/*"],
+  "exclude": ["src/vue/**/*", "src/astro/**/*"]
+}

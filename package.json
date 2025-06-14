@@ -1,0 +1,73 @@
+{
+  "name": "budoux-components",
+  "version": "0.1.0",
+  "description": "BudouX components for React, Vue, and Astro frameworks",
+  "main": "index.js",
+  "exports": {
+    "./react": "./dist/react/index.js",
+    "./vue": "./dist/vue/index.js",
+    "./astro": "./dist/astro/index.js"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run build:react && npm run build:vue && npm run build:astro",
+    "build:react": "tsc -p tsconfig.react.json",
+    "build:vue": "tsc -p tsconfig.vue.json",
+    "build:astro": "mkdir -p dist && cp -r src/astro dist/",
+    "test": "npm run test:react && npm run test:vue",
+    "test:react": "jest --config jest.config.react.cjs",
+    "test:vue": "jest --config jest.config.vue.cjs",
+    "prepublishOnly": "npm run clean && npm run build && npm test",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "budoux",
+    "react",
+    "vue",
+    "astro",
+    "typography",
+    "japanese"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "type": "module",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "vue": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "budoux": "^0.6.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/vue": "^8.0.1",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@vue/test-utils": "^2.4.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3",
+    "vue": "^3.3.13"
+  },
+  "engines": {
+    "node": ">=18.x"
+  }
+}
