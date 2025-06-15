@@ -133,6 +133,10 @@ BudouX は機械学習を使用して、日本語テキストの最も自然な�
 ### セットアップ
 
 ```bash
+# リポジトリをクローン
+git clone https://github.com/ideamans/budoux-components.git
+cd budoux-components
+
 # 依存関係のインストール
 npm install
 
@@ -142,8 +146,22 @@ npm run build
 # テスト
 npm test
 
-# E2E テスト
+# E2E テスト（初回実行時は自動的にセットアップが行われます）
 npm run test:e2e
+```
+
+### E2E テストについて
+
+E2E テストを実行すると、自動的に以下のセットアップが行われます：
+
+1. example ディレクトリの依存関係インストール
+2. コンポーネントのビルド（dist ディレクトリが存在しない場合）
+3. Playwright ブラウザのインストール（初回のみ）
+
+手動でセットアップを行う場合：
+
+```bash
+node scripts/setup-e2e.js
 ```
 
 ### Playwright MCP サーバー

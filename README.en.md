@@ -126,6 +126,48 @@ For example:
 
 All components support children/slot content. When using children, the component will preserve HTML structure while applying BudouX to text nodes.
 
+## Development
+
+### Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/ideamans/budoux-components.git
+cd budoux-components
+
+# Install dependencies
+npm install
+
+# Build
+npm run build
+
+# Test
+npm test
+
+# E2E Test (automatically sets up on first run)
+npm run test:e2e
+```
+
+### About E2E Tests
+
+When running E2E tests, the following setup is performed automatically:
+
+1. Install example directory dependencies
+2. Build components (if dist directory doesn't exist)
+3. Install Playwright browsers (first time only)
+
+To run setup manually:
+
+```bash
+node scripts/setup-e2e.js
+```
+
+### Playwright MCP Server
+
+This project includes Playwright MCP (Model Context Protocol) server, which enables AI assistants to perform browser automation tasks.
+
+Configuration is located at `.mcp/config.json`.
+
 ## Requirements
 
 - Node.js >= 18.x
