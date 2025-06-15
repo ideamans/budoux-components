@@ -1,6 +1,6 @@
 {
   "name": "budoux-components",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "BudouX components for React, Vue, and Astro frameworks",
   "exports": {
     "./react": {
