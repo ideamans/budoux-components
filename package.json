@@ -2,11 +2,22 @@
   "name": "budoux-components",
   "version": "0.1.0",
   "description": "BudouX components for React, Vue, and Astro frameworks",
-  "main": "index.js",
   "exports": {
-    "./react": "./dist/react/index.js",
-    "./vue": "./dist/vue/index.js",
-    "./astro": "./dist/astro/BudouX.astro"
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.js",
+      "default": "./dist/react/index.js"
+    },
+    "./vue": {
+      "types": "./dist/vue/index.d.ts", 
+      "import": "./dist/vue/index.js",
+      "default": "./dist/vue/index.js"
+    },
+    "./astro": {
+      "types": "./dist/astro/index.ts",
+      "default": "./dist/astro/BudouX.astro"
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "dist/",

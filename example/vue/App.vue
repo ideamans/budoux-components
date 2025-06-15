@@ -75,7 +75,7 @@
 
 <script>
   import { ref } from "vue";
-  import BudouX from "../../dist/vue";
+  import BudouX from "budoux-components/vue";
   import "../shared/styles.css";
 
   export default {

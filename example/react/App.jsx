@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import BudouX from '../../dist/react';
+import BudouX from 'budoux-components/react';
 import '../shared/styles.css';
 
 function App() {
