@@ -8,10 +8,8 @@ export default defineConfig({
     server: {
       fs: {
         allow: [
-          // Allow serving files from the project root
-          '../..',
-          // Allow serving files from node_modules
-          '..'
+          // Allow access to parent directories for dist files
+          '../..'
         ]
       }
     }

@@ -6,19 +6,20 @@
   "exports": {
     "./react": "./dist/react/index.js",
     "./vue": "./dist/vue/index.js",
-    "./astro": "./src/astro/BudouX.astro"
+    "./astro": "./dist/astro/BudouX.astro"
   },
   "files": [
     "dist/",
-    "src/astro/",
     "README.md",
     "README.en.md",
     "LICENSE"
   ],
   "scripts": {
-    "build": "npm run build:react && npm run build:vue",
+    "build": "npm run build:react && npm run build:vue && npm run build:astro && npm run postbuild",
     "build:react": "tsc -p tsconfig.react.json",
     "build:vue": "tsc -p tsconfig.vue.json",
+    "build:astro": "node scripts/build-astro.js",
+    "postbuild": "node scripts/post-build.js",
     "test": "npm run test:react && npm run test:vue",
     "test:react": "jest --config jest.config.react.cjs",
     "test:vue": "jest --config jest.config.vue.cjs",
