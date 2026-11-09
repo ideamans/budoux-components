@@ -2,6 +2,10 @@
   "name": "budoux-components",
   "version": "0.2.0",
   "description": "BudouX components for React, Vue, and Astro frameworks",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ideamans/budoux-components.git"
+  },
   "exports": {
     "./react": {
       "types": "./dist/react/index.d.ts",
