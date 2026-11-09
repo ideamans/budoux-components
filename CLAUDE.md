@@ -127,5 +127,6 @@ git tag vX.Y.Z && git push origin vX.Y.Z
 - 手元から `npm publish` しない（トークンを置かない）
 - タグを打ち直さずに出し直すときは、Actions の「Publish to npm」を workflow_dispatch で起動する（選んだブランチの package.json の版を出す）
 - PR で `publish.yml` を変えると、公開せずにビルドと `npm pack --dry-run` までが走る
+- package.json の `repository` はこのリポジトリを指すこと。provenance の検証で照合され、違うと公開が `E422` で落ちる（ワークフローが先に検査する）
 - 前提: npmjs.com の `budoux-components` の設定で、Trusted Publisher に GitHub Actions・`ideamans/budoux-components`・`publish.yml`・権限 **publish** を登録してあること。
   stage publish の権限だけだと `npm publish` は `E403 OIDC permission denied` になる
